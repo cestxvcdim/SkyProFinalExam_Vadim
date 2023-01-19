@@ -33,7 +33,7 @@ def search_by_subject(subject_name: str) -> str | list[dict[str, str | int]]:
     В случае, когда дисциплина не находится, или пользователь ввёл неверное значение, возвращается строковое значение
     Функция возвращает список с вложенными словарями
     '''
-    if type(subject_name) != subject_name:
+    if type(subject_name) != str:
         return 'Неверный запрос'
     data = get_all_data()
     results = []
