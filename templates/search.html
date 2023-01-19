@@ -46,7 +46,6 @@
 </nav>
 
 <p class="text-sm-start">Info about {{ subject_name }}</p>
-{% for lesson in data %}
 <table class="table">
     <thead>
     <tr>
@@ -58,6 +57,7 @@
     </tr>
     </thead>
     <tbody>
+    {% for lesson in data %}
     <tr>
         <th scope="row">{{ lesson.day_week }}</th>
         <td>{{ lesson.time }}</td>
@@ -65,8 +65,8 @@
         <td>{{ lesson.classroom }}</td>
         <td>{{ lesson.teacher }}</td>
     </tr>
+    {% endfor %}
     </tbody>
 </table>
-{% endfor %}
 </body>
 </html>
