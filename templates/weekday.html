@@ -9,7 +9,7 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
 
-    <title>School Schedule</title>
+    <title>Next Day Schedule</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,18 +24,6 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">Главная</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/weekdays/{{ day }}">Расписание на завтра</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Перейти
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/weekdays/{{ day }}">Расписание на завтра</a></li>
-                    </ul>
-                </li>
             </ul>
             <form class="d-flex" method="GET" action="/search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="s">
@@ -45,7 +33,7 @@
     </div>
 </nav>
 
-<p class="text-sm-start">Schedule</p>
+<p class="text-sm-start">{{ weekday }} Schedule</p>
 {% for lesson in data %}
 <table class="table">
     <thead>
